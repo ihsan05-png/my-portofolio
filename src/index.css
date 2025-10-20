@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode - Cosmic Day */
+    --background: 0 0% 95%;
+    --foreground: 180 2% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 180 2% 10%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 180 2% 10%;
+
+    --primary: 177 70% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 78%;
+    --secondary-foreground: 180 2% 10%;
+
+    --muted: 0 0% 88%;
+    --muted-foreground: 180 2% 30%;
+
+    --accent: 177 70% 70%;
+    --accent-foreground: 180 2% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 177 70% 70%;
+
+    --radius: 0.75rem;
+    
+    /* Custom colors */
+    --cyan-neon: 177 70% 70%;
+    --space-black: 200 18% 5%;
+    --steel-gray: 0 0% 78%;
+    --cosmic-silver: 0 0% 88%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Deep Space Night */
+    --background: 200 18% 5%;
+    --foreground: 0 0% 85%;
+
+    --card: 200 20% 8%;
+    --card-foreground: 0 0% 85%;
+
+    --popover: 200 20% 8%;
+    --popover-foreground: 0 0% 85%;
+
+    --primary: 177 70% 70%;
+    --primary-foreground: 200 18% 5%;
+
+    --secondary: 200 10% 15%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 200 10% 15%;
+    --muted-foreground: 0 0% 78%;
+
+    --accent: 177 70% 70%;
+    --accent-foreground: 200 18% 5%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 200 15% 20%;
+    --input: 200 15% 20%;
+    --ring: 177 70% 70%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    text-shadow: 0 0 10px hsl(var(--cyan-neon)), 0 0 20px hsl(var(--cyan-neon)), 0 0 30px hsl(var(--cyan-neon));
+  }
+  
+  .glow-cyan-sm {
+    text-shadow: 0 0 5px hsl(var(--cyan-neon)), 0 0 10px hsl(var(--cyan-neon));
+  }
+  
+  .box-glow-cyan {
+    box-shadow: 0 0 10px hsl(var(--cyan-neon) / 0.3), 0 0 20px hsl(var(--cyan-neon) / 0.2), 0 0 30px hsl(var(--cyan-neon) / 0.1);
+  }
+  
+  .box-glow-cyan-lg {
+    box-shadow: 0 0 20px hsl(var(--cyan-neon) / 0.4), 0 0 40px hsl(var(--cyan-neon) / 0.3), 0 0 60px hsl(var(--cyan-neon) / 0.2);
+  }
+  
+  .border-glow {
+    border: 1px solid hsl(var(--cyan-neon) / 0.5);
+    box-shadow: 0 0 10px hsl(var(--cyan-neon) / 0.3), inset 0 0 10px hsl(var(--cyan-neon) / 0.1);
+  }
+  
+  :root .border-glow {
+    border: 2px solid hsl(180 2% 10% / 0.8);
+    box-shadow: 0 0 15px hsl(var(--cyan-neon) / 0.5), inset 0 0 10px hsl(var(--cyan-neon) / 0.2);
+  }
+  
+}
