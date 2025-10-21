@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code2, Cpu, Lightbulb } from 'lucide-react';
+import { Code2, Cpu} from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.png';
 
 export const About = () => {
@@ -81,8 +81,8 @@ export const About = () => {
             </h3>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Saya adalah seorang mahasiswa <span className="text-primary font-semibold">Teknik Informatika</span> yang sedang belajar Backend dan 
-              dan ingnin menjadi Fullstack Developer.
+              Saya adalah seorang mahasiswa <span className="text-primary font-semibold">Teknik Informatika</span> yang sedang belajar Backend dan
+              ingin menjadi Fullstack Developer.
             </p>
 
             <div className="grid grid-cols-1 gap-4">
@@ -111,24 +111,10 @@ export const About = () => {
                   </p>
                 </div>
               </motion.div>
-
-              <motion.div
-                whileHover={{ x: 10 }}
-                className="flex items-start gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-primary/20 hover:border-primary/50 transition-all"
-              >
-                <Lightbulb className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-primary mb-1">Innovation & Creativity</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Menciptakan solusi inovatif yang menyeimbangkan logika dan imajinasi
-                  </p>
-                </div>
-              </motion.div>
             </div>
 
             <p className="text-base text-muted-foreground italic border-l-4 border-primary pl-4">
-              "Dalam perjalanan antara cahaya dan kegelapan, saya menemukan kekuatan untuk 
-              mengubah ide menjadi kenyataan digital."
+              "Perjalanan saya baru dimulai, dan saya terus belajar untuk menciptakan sesuatu lewat teknologi."
             </p>
           </motion.div>
         </div>

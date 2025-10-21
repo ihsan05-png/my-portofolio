@@ -51,8 +51,8 @@ export const Contact = () => {
           transition={{ delay: 0.2 }}
           className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"
         >
-          Mari berkolaborasi dalam perjalanan digital. Hubungi saya untuk diskusi proyek, 
-          konsultasi teknologi, atau sekadar berbagi ide inovatif.
+          Mari berkolaborasi dan belajar bersama di dunia digital. 
+          Hubungi saya untuk berdiskusi tentang proyek, teknologi, atau berbagi ide menarik!
         </motion.p>
 
         {/* Contact Form */}
@@ -63,7 +63,16 @@ export const Contact = () => {
           transition={{ delay: 0.3 }}
           className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-8 mb-12"
         >
-          <form className="space-y-6">
+          <form 
+            className="space-y-6"
+            action="https://formsubmit.co/ihsanprt7@gmail.com"
+            method="POST"
+          >
+            {/* Hidden fields for FormSubmit configuration */}
+            <input type="hidden" name="_subject" value="Pesan dari Portfolio Website" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            
             {/* Name */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
@@ -72,6 +81,8 @@ export const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
+                required
                 onFocus={() => setFocused('name')}
                 onBlur={() => setFocused(null)}
                 className={`w-full px-4 py-3 bg-background border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none transition-all duration-300 ${
@@ -91,6 +102,8 @@ export const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
+                required
                 onFocus={() => setFocused('email')}
                 onBlur={() => setFocused(null)}
                 className={`w-full px-4 py-3 bg-background border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none transition-all duration-300 ${
@@ -109,7 +122,9 @@ export const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows={5}
+                required
                 onFocus={() => setFocused('message')}
                 onBlur={() => setFocused(null)}
                 className={`w-full px-4 py-3 bg-background border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none transition-all duration-300 resize-none ${

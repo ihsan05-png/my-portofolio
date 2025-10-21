@@ -8,7 +8,7 @@ const projects = [
     description: 'Sistem deteksi kebakaran berbasis IoT dengan pemantauan real-time menggunakan ESP32 dan sensor suhu.',
     tech: ['Esp32', 'IoT', 'Arduino IDE', 'C'],
     gradient: 'from-blue-500/20 to-purple-500/20',
-    github: 'https://github.com/ihsanpratama/fire-detection',
+    github: 'https://github.com/ihsan05-png/Fire-Detection',
   },
   {
     title: 'SkyNusa',
@@ -110,8 +110,8 @@ export const Projects = () => {
           transition={{ delay: 0.6 }}
           className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto italic"
         >
-          "Setiap proyek adalah planet baru yang saya jelajahi, 
-          membawa cahaya inovasi ke dalam kegelapan tantangan teknologi."
+          "Setiap proyek adalah kesempatan baru 
+          bagi saya untuk belajar dan mengasah kemampuan di dunia teknologi."
         </motion.p>
       </div>
     </section>

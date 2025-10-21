@@ -8,7 +8,7 @@ import { Skills } from '../components/Skills';
 import { Projects } from '../components/Projects';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
-import SplashCursor from '../components/SplashCursor';
+
 
 
 
@@ -38,8 +38,6 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* Splash cursor effect */}
-      <SplashCursor />
       {/* Star field background */}
       <AnimatePresence mode="wait">
         <StarField key={isDark ? 'dark' : 'light'} isDark={isDark} />

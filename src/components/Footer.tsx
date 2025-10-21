@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -18,7 +17,7 @@ export const Footer = () => {
 
           {/* Made with love */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
-            <span>Made with</span>
+            <span>Made with among the stars</span>
             <motion.div
               animate={{
                 scale: [1, 1.2, 1],
@@ -29,14 +28,12 @@ export const Footer = () => {
                 ease: 'easeInOut',
               }}
             >
-              <Heart className="w-4 h-4 text-primary fill-primary" />
             </motion.div>
-            <span>among the stars</span>
           </div>
 
           {/* Tagline */}
           <p className="text-primary/80 text-xs md:text-sm italic glow-cyan-sm">
-            "IhsAnkasa — Membangun Dunia Digital di Antara Cahaya dan Kegelapan"
+            "IhsAnkasa — Menjelajah Batas Teknologi"
           </p>
 
           {/* Decorative stars */}

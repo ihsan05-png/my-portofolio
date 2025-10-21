@@ -2,48 +2,28 @@ import { motion } from 'framer-motion';
 import { Code2, Database, Palette, Smartphone, Brain, Zap } from 'lucide-react';
 
 const skills = [
-  {
-    name: 'HTML & CSS',
-    icon: Code2,
-    color: 'hsl(15, 100%, 60%)',
-    description: 'Struktur & styling web modern',
-  },
-  {
-    name: 'Python',
-    icon: Code2,
-    color: 'hsl(207, 51%, 44%)',
-    description: 'AI, ML & backend development',
-  },
-  {
-    name: 'Laravel',
-    icon: Database,
-    color: 'hsl(0, 100%, 48%)',
-    description: 'PHP framework untuk web apps',
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: Palette,
-    color: 'hsl(199, 89%, 48%)',
-    description: 'Utility-first CSS framework',
-  },
-  {
-    name: 'IoT',
-    icon: Smartphone,
-    color: 'hsl(177, 70%, 70%)',
-    description: 'Embedded systems & sensors',
-  },
-  {
-    name: 'Machine Learning',
-    icon: Brain,
-    color: 'hsl(271, 76%, 53%)',
-    description: 'AI models & data science',
-  },
-  {
-    name: 'React & Next.js',
-    icon: Code2,
-    color: 'hsl(193, 95%, 68%)',
-    description: 'Modern frontend frameworks',
-  },
+  { name: 'HTML', icon: Code2 },
+  { name: 'CSS', icon: Code2 },
+  { name: 'JavaScript', icon: Zap },
+  { name: 'React', icon: Code2 },
+  { name: 'Next.js', icon: Code2 },
+  { name: 'TypeScript', icon: Code2 },
+  { name: 'Tailwind', icon: Palette },
+  { name: 'Framer Motion', icon: Zap },
+  { name: 'MySQL', icon: Database },
+  { name: 'Git', icon: Code2 },
+  { name: 'Github', icon: Code2 },
+  { name: 'Vercel', icon: Zap },
+  { name: 'Deployment', icon: Database },
+  { name: 'Node.js', icon: Code2 },
+  { name: 'Laravel', icon: Code2 },
+  { name: 'PHP', icon: Code2 },
+  { name: 'VS Code', icon: Code2 },
+  { name: 'Web Development', icon: Code2 },
+  { name: 'Team Collaboration', icon: Brain },
+  { name: 'Python', icon: Code2 },
+  { name: 'IoT', icon: Smartphone },
+  { name: 'Machine Learning', icon: Brain },
 ];
 
 export const Skills = () => {
@@ -56,87 +36,53 @@ export const Skills = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-16 glow-cyan"
         >
-          Technical Arsenal
+          Skills & Tools
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-3 md:gap-4"
+        >
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: `0 0 20px ${skill.color}40, 0 0 40px ${skill.color}30, 0 0 60px ${skill.color}20`,
-              }}
-              className="group relative bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-6 hover:border-primary/50 transition-all duration-300"
+              transition={{ delay: index * 0.03, duration: 0.3 }}
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="group relative px-5 py-2.5 rounded-full border-2 border-primary/30 bg-card/80 backdrop-blur-sm hover:border-primary hover:bg-primary/5 transition-all duration-300 cursor-pointer"
             >
+              <div className="flex items-center gap-2">
+                <skill.icon className="w-4 h-4 text-primary group-hover:text-primary transition-colors" />
+                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {skill.name}
+                </span>
+              </div>
+              
               {/* Glow effect on hover */}
-              <div 
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
+              <motion.div
+                className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-md"
                 style={{ 
-                  background: `radial-gradient(circle at center, ${skill.color}20, transparent 70%)`,
+                  background: 'radial-gradient(circle at center, hsl(var(--primary) / 0.2), transparent 70%)',
                 }}
               />
-
-              <div className="relative z-10">
-                {/* Icon */}
-                <motion.div
-                  className="w-16 h-16 mb-4 rounded-full flex items-center justify-center border-2 group-hover:border-opacity-80 transition-all"
-                  style={{ 
-                    borderColor: skill.color,
-                    backgroundColor: `${skill.color}10`,
-                  }}
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <skill.icon 
-                    className="w-8 h-8" 
-                    style={{ color: skill.color }}
-                  />
-                </motion.div>
-
-                {/* Skill name */}
-                <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
-                  {skill.name}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-muted-foreground">
-                  {skill.description}
-                </p>
-
-                {/* Floating particle */}
-                <motion.div
-                  className="absolute top-2 right-2 w-2 h-2 rounded-full"
-                  style={{ backgroundColor: skill.color }}
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.3, 0.8, 0.3],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: index * 0.2,
-                  }}
-                />
-              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Additional decorative text */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto"
+          transition={{ delay: 0.5 }}
+          className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto text-sm"
         >
-          Setiap teknologi adalah bintang dalam galaksi pengetahuan saya. 
-          Bersama-sama, mereka membentuk konstelasi yang memandu perjalanan digital.
+         Saya sedang belajar banyak hal tentang teknologi 
+         agar bisa membangun sesuatu yang bermanfaat di masa depan.
         </motion.p>
       </div>
     </section>
