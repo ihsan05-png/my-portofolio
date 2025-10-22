@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: 'SkyNusa',
-    description: 'Aplikasi web untuk pemesanan tiket pesawat dengan fitur pencarian, pemesanan, dan pembayaran online.',
+    description: 'Website untuk pemesanan tiket pesawat dengan fitur pencarian, pemesanan, dan pembayaran online.',
     tech: ['Laravel', 'PHP', 'MySQL'],
     gradient: 'from-orange-500/20 to-pink-500/20',
     github: 'https://github.com/ihsan05-png/SkyNusa-Project',
