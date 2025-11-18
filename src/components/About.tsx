@@ -81,8 +81,13 @@ export const About = () => {
             </h3>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Saya adalah seorang mahasiswa <span className="text-primary font-semibold">Teknik Informatika</span> yang sedang belajar Backend dan
-              ingin menjadi Fullstack Developer.
+              Saya adalah Mahasiswa <span className="text-primary font-semibold">Teknik Informatika Semester 5</span> di 
+              <span className="text-primary font-semibold"> Universitas Negeri Semarang</span>, dengan minat pada 
+              <span className="text-primary font-semibold"> Full-Stack Development</span>. Saya tertarik
+              mengembangkan aplikasi web dari sisi <span className="text-primary font-semibold"> front-end</span> maupun 
+              <span className="text-primary font-semibold"> back-end</span>, dan terus
+              belajar memanfaatkan teknologi modern untuk membuat sistem yang efisien,
+              responsif, serta mudah digunakan.
             </p>
 
             <div className="grid grid-cols-1 gap-4">

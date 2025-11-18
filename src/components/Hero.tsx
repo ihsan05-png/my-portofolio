@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, FileDown } from 'lucide-react';
 import logoPlanet from '@/assets/logo-planet.png';
 
 
 export const Hero = () => {
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+    const downloadCV = () => {
+    // File CV harus berada di public/cv/
+    const cvPath = '/cv/IhsanPratamaP-CV.pdf';
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.download = 'IhsanPratamaP-CV.pdf';
+    link.click();
   };
 
   return (
@@ -77,7 +86,7 @@ export const Hero = () => {
         >
           Membangun Dunia Digital di Antara Cahaya dan Kegelapan
         </motion.p>
-
+      <div className="flex justify-center gap-6">
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -90,7 +99,20 @@ export const Hero = () => {
           <span className="dark:glow-cyan-sm">Explore My Universe</span>
           <ArrowDown className="inline-block ml-2 w-5 h-5 group-hover:animate-bounce" />
         </motion.button>
-      </div>
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.1, duration: 0.5 }}
+          onClick={downloadCV}
+          className="group relative px-8 py-4 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-950 border border-slate-900 dark:border-slate-100 rounded-full font-semibold text-lg hover:bg-slate-800 dark:hover:bg-slate-200 hover:shadow-lg hover:shadow-slate-900/50 dark:hover:shadow-slate-100/50 transition-all duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className="dark:glow-cyan-sm">Download CV</span>
+          <FileDown className="inline-block ml-2 w-5 h-5 group-hover:animate-bounce" />
+        </motion.button>
+      </div>  
+    </div>
 
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
