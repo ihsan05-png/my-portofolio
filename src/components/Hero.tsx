@@ -10,10 +10,10 @@ export const Hero = () => {
 
     const downloadCV = () => {
     // File CV harus berada di public/cv/
-    const cvPath = '/cv/IhsanPratamaP-CV.pdf';
+    const cvPath = '/cv/CV-Ihsan Pratama Putra';
     const link = document.createElement('a');
     link.href = cvPath;
-    link.download = 'IhsanPratamaP-CV.pdf';
+    link.download = 'CV-Ihsan Pratama Putra.pdf';
     link.click();
   };
 
